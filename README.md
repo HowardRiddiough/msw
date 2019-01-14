@@ -28,6 +28,10 @@ Create a virtualenv somewhere. For example:
 Activate it:
 
     source ~/pyvenvs/msw/bin/activate
+    
+Clone repo:
+
+    git clone git@github.com:HowardRiddiough/msw-live.git
 
 Now install the package + dependencies + test dependencies (e.g. flake8 and pytest) in editable mode:
 
@@ -42,8 +46,4 @@ See [CONTRIBUTING.md](https://github.com/HowardRiddiough/msw-live/blob/master/CO
 # Command Line Tools
 Once `msw` is you can invoke the live forecast visualisation as follows: 
 
-    $ mswlive
-
-
-## Contributors
-[HowardRiddiough](https://github.com/HowardRiddiough)
+    mswlive

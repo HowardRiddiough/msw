@@ -63,18 +63,20 @@ class GeographicViz(ShortTermForecastData):
 
         return m
 
-    def save_and_open(self, out_path: str=None):
+    def save_and_open(self, out_path: str=None, open_in_browser: bool=True):
         """Saves geographical visualisation as a .html file and opens that file in a web browser.
 
         Args:
             out_path: Path where to save geographical visualisation
+            open_in_browser: If True the html will be opened in a web browser
         """
         if not out_path:
             out_path = "../index.html"
 
         self._geo_viz.save(out_path)
 
-        webbrowser.open("file://" + os.path.realpath(out_path))
+        if open_in_browser:
+            webbrowser.open("file://" + os.path.realpath(out_path))
 
     @staticmethod
     def _gen_color_map(values) -> list:
