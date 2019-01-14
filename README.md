@@ -37,7 +37,7 @@ You need to re-activate the virtualenv to make the newly installed executables, 
 available in your PATH.
 
 # Contributing code
-See CONTRIBUTING.md
+See [CONTRIBUTING.md](https://github.com/HowardRiddiough/msw-live/blob/master/CONTRIBUTING.md)
 
 # Command Line Tools
 Once `msw` is you can invoke the live forecast visualisation as follows: 
