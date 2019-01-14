@@ -6,11 +6,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 cli_path = "cli-tools/"
-cli_files = []
-for path, subdirs, files in os.walk(cli_path):
-    for f in files:
-        if "." not in f:
-            cli_files.append(os.path.join(path, f))
+cli_files = [os.path.join(cli_path, file) for file in os.listdir(cli_path)]
 
 setup(
     name="msw",
