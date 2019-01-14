@@ -6,6 +6,8 @@ import pandas as pd
 from .utils import DATA_PATH
 
 logger = logging.getLogger(__file__)
+logger.setLevel(logging.INFO)
+
 
 MSW_API_KEY = os.environ["MSW_API_KEY"]
 MSW_API_URL_STUB = f"http://magicseaweed.com/api/{MSW_API_KEY}/forecast/?spot_id="

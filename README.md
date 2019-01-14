@@ -31,7 +31,7 @@ Activate it:
 
 Now install the package + dependencies + test dependencies (e.g. flake8 and pytest) in editable mode:
 
-    pip install -e .
+    pip install -e ".[test]"
 
 You need to re-activate the virtualenv to make the newly installed executables, such as our own CLI tools 
 available in your PATH.
