@@ -1,5 +1,6 @@
 import os
 import webbrowser
+import logging
 
 import numpy as np
 import pandas as pd
@@ -8,6 +9,9 @@ import matplotlib.cm
 import folium
 
 from . import ShortTermForecastData
+
+logger = logging.getLogger(__file__)
+logger.setLevel(logging.INFO)
 
 
 class GeographicViz(ShortTermForecastData):
@@ -36,6 +40,8 @@ class GeographicViz(ShortTermForecastData):
         A popup marker is included providing further information: spot name, swell height, period and number
         of MSW solid stars.
         """
+        logger.info("Creating visualisation")
+
         m = folium.Map([50, 0], zoom_start=3.5, tiles='cartodbpositron')
 
         for row in self.data.itertuples():

@@ -7,6 +7,7 @@ from . import LocationData
 from .utils import process_json
 
 logger = logging.getLogger(__file__)
+logger.setLevel(logging.INFO)
 
 
 class ShortTermForecastData(LocationData):
