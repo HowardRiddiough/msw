@@ -1,37 +1,49 @@
-# msw
+# msw-live
 
 ## Introduction
-msw is a tool that uses the Magicseaweed forecast api to create a web based interactive geographic visulisation of the current surf forecast. The website can be found [here](https://howardriddiough.github.io/msw/).
+msw-live provides a command line tool that can be invoked to create a web based interactive geographic 
+visulisation of the current surf forecast. A sample visualisation can be found 
+[here](https://howardriddiough.github.io/msw-live/).
 
-The visulisation includes a bubble for every surf spot listed in [surf_spots.csv](https://github.com/HowardRiddiough/msw/blob/master/data/surfspots.csv). The size of the bubble is determined by the actual wave height and the bubble's color intensity determined by the number of solid stars as provided by Magicseaweed. Each bubble can be clicked to show more information about the surf spot and it's respective foreacst. The idea being to show clearly in one view where the best location to surf at a given moment in time is.
+The visulisation includes a bubble for every surf spot listed in 
+[surf_spots.csv](https://github.com/HowardRiddiough/msw/blob/master/data/surfspots.csv). 
+The size of the bubble is determined by the actual wave height and the bubble's color intensity determined by 
+the number of solid stars as provided by Magicseaweed. Each bubble can be clicked to show more information 
+about the surf spot and it's respective forecast. The idea being to show clearly in one view where the best 
+location to surf at a given moment in time is.
 
-msw is powered by Magicseaweed's forecast api, more information can be found [here](https://magicseaweed.com/developer/api).
+msw is powered by Magicseaweed's forecast api, more information can be found 
+[here](https://magicseaweed.com/developer/api).
 
-## Work in progress
-msw is very much a work in progress. There are a number of things to be added to the tool:
+# Installation
+Use Python 3.6!
 
-* All surf spots need to be added to surf_spots.csv
-* A key is to be added to the map
-* An arrow indicating local wind direction is to be added to the map for each surf spot.
-* Ideally tidal information would be included in the map too.
-* Time dimesion to be added to the map so users can see how the forecast develops over the coming days.
+## Install
 
-## Usage
-Running spotCheck.py will create [index.html](https://github.com/HowardRiddiough/msw/blob/master/index.html).
+### Install package inside virtualenv
+Create a virtualenv somewhere. For example:
 
-## Dependancies
-In order to run this code you will need to have the following packages:
+    python -m venv ~/pyvenvs/msw
 
-* [os](https://docs.python.org/2/library/os.html)
-* [datetime](https://docs.python.org/2/library/datetime.html)
-* [Pandas](https://pandas.pydata.org/pandas-docs/stable/)
-* [matplotlib](https://matplotlib.org/contents.html)
-* [PyYaml](https://github.com/yaml/pyyaml)
-* [Folium](https://github.com/python-visualization/folium)
-* [webbrowser](https://docs.python.org/2/library/webbrowser.html)
+Activate it:
 
-## Issue Guidlines
-In case you encounter bugs please submit a new issue on [github](https://github.com/HowardRiddiough/msw/issues). Please list the reported error and data used that will help us reconstruct it. This will help us reproduce and resolve the bug.
+    source ~/pyvenvs/msw/bin/activate
+
+Now install the package + dependencies + test dependencies (e.g. flake8 and pytest) in editable mode:
+
+    pip install -e .
+
+You need to re-activate the virtualenv to make the newly installed executables, such as our own CLI tools 
+available in your PATH.
+
+# Contributing code
+See CONTRIBUTING.md
+
+# Command Line Tools
+Once `msw` is you can invoke the live forecast visualisation as follows: 
+
+    $ mswlive
+
 
 ## Contributors
 [HowardRiddiough](https://github.com/HowardRiddiough)
