@@ -44,6 +44,6 @@ available in your PATH.
 See [CONTRIBUTING.md](https://github.com/HowardRiddiough/msw-live/blob/master/CONTRIBUTING.md)
 
 # Command Line Tools
-Once `msw` is you can invoke the live forecast visualisation as follows: 
+Once `msw` is installed you can invoke the live forecast visualisation as follows: 
 
     mswlive
