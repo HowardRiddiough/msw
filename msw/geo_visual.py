@@ -15,7 +15,7 @@ logger.setLevel(logging.INFO)
 
 
 class GeographicViz(ShortTermForecastData):
-    def __init__(self, location_data: pd.DataFrame=None, limit_data: int=None):
+    def __init__(self, location_data: pd.DataFrame = None, limit_data: int = None):
         """Inherits state from 'msw.ShortTermForecastData' in order to download short term forecast data for
         each spot listed in 'location_data'.
 
@@ -63,7 +63,7 @@ class GeographicViz(ShortTermForecastData):
 
         return m
 
-    def save_and_open(self, out_path: str=None, open_in_browser: bool=True):
+    def save_and_open(self, out_path: str = None, open_in_browser: bool = True):
         """Saves geographical visualisation as a .html file and opens that file in a web browser.
 
         Args:
@@ -74,6 +74,7 @@ class GeographicViz(ShortTermForecastData):
             out_path = "../index.html"
 
         self._geo_viz.save(out_path)
+        logger.info(f"Visualisation saved to: {os.path.abspath(out_path)}")
 
         if open_in_browser:
             webbrowser.open("file://" + os.path.realpath(out_path))

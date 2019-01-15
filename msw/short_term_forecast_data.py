@@ -11,7 +11,7 @@ logger.setLevel(logging.INFO)
 
 
 class ShortTermForecastData(LocationData):
-    def __init__(self, location_data: pd.DataFrame=None):
+    def __init__(self, location_data: pd.DataFrame = None):
         """Inherits state from 'msw.LocationData' in order to download short term forecast data for each
         spot listed in 'location_data'.
 

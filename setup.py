@@ -18,13 +18,14 @@ setup(
     packages=["msw"],
     install_requires=[
         "folium==0.7.0",
+        "jupyter==1.0.0",
         "matplotlib==2.2.3",
         "numpy==1.15.0",
         "pandas==0.23.4",
         "tqdm==4.26.0"
     ],
     extras_require={
-        "test": {"flake8==3.5.0", "pep8-naming==0.7.0", "pytest==3.7.0", "pytest-cov"},
+        "test": {"flake8==3.6.0", "pep8-naming==0.7.0", "pytest==3.7.0", "pytest-cov"},
     },
     scripts=cli_files,
 )

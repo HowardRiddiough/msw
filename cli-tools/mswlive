@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from msw import GeographicViz
 
+
 def main():
     """Command line tool to generate today's geographic surf forecast visualisation."""
     viz = GeographicViz()
