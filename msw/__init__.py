@@ -1,5 +1,8 @@
 import logging
 
+import matplotlib
+matplotlib.use("Agg")
+
 # flake8: noqa:F401
 from .location_data import LocationData
 from .short_term_forecast_data import ShortTermForecastData

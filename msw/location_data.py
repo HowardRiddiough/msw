@@ -23,7 +23,7 @@ FIELDS = [
 
 
 class LocationData:
-    def __init__(self, location_data: pd.DataFrame=None):
+    def __init__(self, location_data: pd.DataFrame = None):
         """Given some 'location_data' an object is created that includes the information contained within
         location_data in addition to a 'target_url' field. 'target_url' is unique to each location and
         corresponds to the Magicseaweed short term forecast API endpoint.
